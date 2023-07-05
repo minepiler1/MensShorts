@@ -1,0 +1,207 @@
+@font-face {
+    font-family: 'unisans';
+    src: url(/fonts/Uni\ Sans\ Thin.otf);
+}
+
+::-webkit-scrollbar{
+    width: 0.5em;
+    scrollbar-color: white black;
+}
+
+::-webkit-scrollbar-track{
+    
+    border-radius: 100vw;
+    margin-block: .5em;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: white;
+    border-radius: 100vw;
+}
+
+body{
+    overflow-x: hidden;
+    color: lightgray;
+    font-family: unisans;
+    background-color: #040404;
+    padding: 0;
+    margin: 0%;
+    height: 100vh;
+}
+
+p{
+    margin-left: 150px;
+    position: absolute;
+    font-size: 25px;
+}
+
+.wrapper{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 120px 400px auto 150px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-row: 1/1;
+    
+}
+
+header div:nth-child(1)>img{
+
+    margin-left: 35px;
+    object-fit: contain;
+    height: 90px;
+    border-radius: 50px;
+    border: 1px solid white;
+}
+
+h1{
+    font-size: 73px;
+}
+
+a img{
+    margin-right: 35px;
+    height: 45px;
+}
+
+.div1{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+h1, h2{
+    font-weight: 100;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.div1 h2{
+    align-self: baseline;
+}
+
+.div2 h2{
+    display: flex;
+    align-self: center;
+    margin-left: 90px;
+    font-size: 40px;
+}
+
+.div2 h2:nth-child(3){
+    display: flex;
+    margin-top: auto;
+}
+
+
+.div2{
+    display: grid;
+    grid-template-rows: 100px 1fr 100px;
+    
+}
+
+.div21, .div22{
+    display: grid;
+    grid-template-rows: 300px 300px;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-gap: 20px;
+}
+
+.div21 div, .div22 div{
+    margin-left: 90px;
+    margin-right: 90px;
+    height: 300px;
+    background-color: white;
+
+}
+
+footer{
+    display: flex;
+    align-items: baseline;
+    
+}
+
+footer p{
+    display: flex;
+    font-size: 20px;
+    margin-left: 90px;
+}
+
+
+@media only screen and (max-width: 1300px) {
+    h1{
+      font-size: 40px;
+      width: 400px;
+    }
+
+    .div1 h2{
+      font-size: 15px;
+      width: 400px;
+      margin-top: -50px;
+    }
+
+    footer p {
+    
+        font-size: 10px;
+    }
+  }
+
+    @media only screen and (max-width: 600px) {
+    
+    .div1{
+        justify-content: initial;
+    }
+
+    .div1 h2{
+        font-size: 15px;
+        width: 400px;
+       
+        margin-left: 50px;
+    }
+
+    .div2 h2{
+        margin-top: -40px;
+        margin-left: 50px;
+        font-size: 30px;
+    }
+
+    .div21{
+        margin-top: -40px;
+    }
+
+    footer {
+        display: flex;
+    }
+    footer p {
+        margin-left: 50px;
+        margin-right: 50px;
+        padding: 0%;
+    }
+
+    h1{
+        font-size: 40px;
+        width: 400px;
+        margin-left: 50px;
+    }
+    
+    header p {
+      display: none;
+    }
+
+    .div21 div, .div22 div{
+        margin-left: 50px;
+        margin-right: 50px;
+        height: 300px;
+        background-color: white;
+    
+    }
+
+    .div2{
+        display: grid;
+        grid-template-rows: 100px 1fr 50px;
+        
+    }
+  }
