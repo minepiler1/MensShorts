@@ -35,6 +35,16 @@ p{
     font-size: 25px;
 }
 
+a{
+    text-decoration: none;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+a h1{
+    margin-left: 0;
+}
+
 .wrapper{
     height: 100vh;
     display: grid;
@@ -51,7 +61,6 @@ header{
 }
 
 header div:nth-child(1)>img{
-
     margin-left: 35px;
     object-fit: contain;
     height: 90px;
@@ -63,7 +72,7 @@ h1{
     font-size: 73px;
 }
 
-a img{
+header a img{
     margin-right: 35px;
     height: 45px;
 }
@@ -87,7 +96,7 @@ h1, h2{
 .div2 h2{
     display: flex;
     align-self: center;
-    margin-left: 90px;
+    margin-left: 50px;
     font-size: 40px;
 }
 
@@ -103,33 +112,80 @@ h1, h2{
     
 }
 
-.div21, .div22{
+.div21{
     display: grid;
-    grid-template-rows: 300px 300px;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    grid-gap: 20px;
+    grid-template-rows: auto ;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    grid-gap:  20px;
+    
 }
 
-.div21 div, .div22 div{
-    margin-left: 90px;
-    margin-right: 90px;
-    height: 300px;
-    background-color: white;
-
+.div21 div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.div21 div > h1{
+    margin-left: auto;
+    margin-right: auto;
+  
+}
+
+.div21 div > img {
+    position: relative;
+    height: 400px;
+    width: 270px;
+    margin-top: 90px;
+    transition: 0.5s;
+    opacity: 1; /* Add this line to ensure initial opacity is set */
+  }
+  
+  .div21 div:hover > img {
+    cursor: pointer;
+    opacity: 0.3;
+    scale: 1.05;
+  }
+  
+  .div21 div:hover >h1{
+    scale: 1.05;
+    cursor: pointer;
+  }
+  
+  .content {
+    height: 400px;
+    width: 270px;
+    margin-top: 90px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.5s;
+  }
+
+  .content h1{
+    font-size: 25px;
+    font-weight: 600;
+  }
+  
+  .content:hover {
+    opacity: 1;
+  }
 footer{
     display: flex;
-    align-items: baseline;
-    
+    align-items: center;
 }
 
 footer p{
     display: flex;
     font-size: 20px;
-    margin-left: 90px;
+    margin-left: 50px;
 }
 
+.content h1 {
+    width: auto;
+}
 
 @media only screen and (max-width: 1300px) {
     h1{
@@ -158,13 +214,13 @@ footer p{
     .div1 h2{
         font-size: 15px;
         width: 400px;
-       
         margin-left: 50px;
     }
 
     .div2 h2{
         margin-top: -40px;
-        margin-left: 50px;
+        margin-left: auto;
+        margin-right: auto;
         font-size: 30px;
     }
 
@@ -189,14 +245,6 @@ footer p{
     
     header p {
       display: none;
-    }
-
-    .div21 div, .div22 div{
-        margin-left: 50px;
-        margin-right: 50px;
-        height: 300px;
-        background-color: white;
-    
     }
 
     .div2{
